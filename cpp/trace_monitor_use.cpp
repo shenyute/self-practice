@@ -5,6 +5,7 @@
 int main()
 {
   TraceMonitor monitor;
+  // block open system call, you can reference syscallent.h
   std::set<int> blockCalls = {2};
   monitor.BlockSysCall(blockCalls);
   monitor.StartTrace();
