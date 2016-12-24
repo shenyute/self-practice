@@ -162,7 +162,7 @@ bool TraceMonitor::CheckEndTrace()
   FD_SET(m_pipefd[0], &readFDs);
   int maxFD = m_pipefd[0] + 1;
   int ret = select(maxFD, &readFDs, NULL, NULL, &timeout);
-  fprintf(stderr, "select fd=%d ret=%d\n", m_pipefd[0], ret);
+  // fprintf(stderr, "select fd=%d ret=%d\n", m_pipefd[0], ret);
   if (ret == 0)
     return false;
   else if (ret == 1) {
