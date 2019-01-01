@@ -1,0 +1,13 @@
+group("gn_all") {
+  deps = [
+    # add subdirectory target in here
+  ]
+}
+
+executable("trace_monitor") {
+  sources = [
+    "trace_monitor.cpp",
+    "trace_monitor.h",
+    "trace_monitor_use.cpp",
+  ]
+}
